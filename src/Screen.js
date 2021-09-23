@@ -2,7 +2,8 @@ import React from "react";
 import {
     View,
     Text,
-    FlatList
+    FlatList,
+    Button
 } from 'react-native'
 import { gql, useQuery } from '@apollo/client'
 
@@ -16,7 +17,7 @@ const CHAPTERS_QUERY = gql`
   }
 `
 
-export default Screen = () => {
+export default Screen = ({navigation}) => {
 
     const { data, loading } = useQuery(CHAPTERS_QUERY)
 
@@ -37,6 +38,10 @@ export default Screen = () => {
             />
             : <Text>Loading</Text>
             }
+            <Button
+              onPress={() => {navigation.navigate('Realm')}}  
+              title="Realm"  
+            />
         </View>
     )
 }
