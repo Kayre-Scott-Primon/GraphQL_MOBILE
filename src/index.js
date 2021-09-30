@@ -5,6 +5,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ScreenRealm from "./ScreenRealm";
 import ScreenOffline from './offline'
+import ScreenRedux from "./redux";
+import ScreenGraphQL from "./grapgQL";
 
 const cache = new InMemoryCache()
 
@@ -23,6 +25,8 @@ const App = () => (
                 <Stack.Screen name="Home" component={Screen} />
                 <Stack.Screen name="Realm" component={ScreenRealm} />
                 <Stack.Screen name="Offline" component={ScreenOffline} />
+                <Stack.Screen name='Redux' component={ScreenRedux} />
+                <Stack.Screen name='GraphQL' component={ScreenGraphQL} />
             </Stack.Navigator>
         </NavigationContainer>
     </ApolloProvider>

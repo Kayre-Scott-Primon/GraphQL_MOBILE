@@ -192,9 +192,20 @@ export default function ScreenOffline(){
 
      return(
           <View style={{backgroundColor: "#aed", flex: 1}}>
-               <Text style={{marginBottom: 10}}>Testando Offline</Text>
-               <Text style={{fontWeight: '900', marginBottom: 10}}>Online NetInfo {isConnectionNetInfo ? 'online' : 'offline'}</Text>
-               <Text style={{fontWeight: '900', marginBottom: 10}}>Online type {isConnectionNetInfoType}</Text>
+               <Text  style={{alignSelf: 'center', fontSize: 20, fontWeight: '900', margin: 15}}>Testando Offline</Text>
+               <View style={{height: 1, width: '90%', alignSelf: 'center', backgroundColor: '#00a', marginBottom: 10}}/>
+               <Text style={{ fontSize: 15, fontWeight: '500', margin: 25}}>
+                    Aqui consta-se maiores informações no proprio codigo{'\n\n'}
+                    Não foi possivel apresentar nada no front sobre o OffLine First devido a falta de uma API preparada para tal funcionalidade
+               </Text>
+               <Text 
+                    style={{fontWeight: '900', marginBottom: 10, fontSize: 18, alignSelf: 'center', padding: 20}}
+               >    Online NetInfo {isConnectionNetInfo ? 'online' : 'offline'}
+               </Text>
+               <Text 
+                    style={{fontWeight: '900', marginBottom: 10, fontSize: 18, alignSelf: 'center', padding: 20}}
+               >    Online type {isConnectionNetInfoType}
+               </Text>
           </View>
      )
 

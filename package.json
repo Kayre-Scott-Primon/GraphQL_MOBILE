@@ -21,6 +21,7 @@
     "react-native-offline": "^6.0.0",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.7.2",
+    "react-native-sha256": "^1.4.7",
     "realm": "^10.8.0"
   },
   "devDependencies": {

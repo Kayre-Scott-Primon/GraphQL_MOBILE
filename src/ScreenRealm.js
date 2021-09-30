@@ -106,16 +106,23 @@ export default function ScreenRealm() {
     }
 
     return(
-        <View style={{backgroundColor: '#5f5', flex: 1}}>
-            <Text>
-                Tetsando Screen Realm
+        <View style={{backgroundColor: '#5f5', flex: 1, padding: 20}}>
+            <Text style={{alignSelf: 'center', fontSize: 20, fontWeight: '900', margin: 15}}>
+                Testando Screen Realm
             </Text>
+            <View style={{height: 2, width: '90%', alignSelf: 'center', backgroundColor: '#d0f'}}/>
             {!loading ? 
             <FlatList
                 data={Datas}
                 keyExtractor={(chapter) => chapter.id.toString()}
+                style={{
+                    backgroundColor: '#1bf',
+                    borderLeftWidth: 10,
+                    borderColor: '#444',
+                    marginTop: 20
+                }}
                 renderItem={({ item }) => (
-                    <Text>{item.title}</Text>
+                    <Text style={{ fontSize: 18, borderBottomWidth: 2, borderColor: '#555', margin: 10, color: '#fff'}}>{item.title}</Text>
                 )}
             />
             : <Text>Loading</Text>
