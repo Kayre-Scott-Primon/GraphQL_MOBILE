@@ -50,17 +50,20 @@ export default function ScreenRealm() {
         });*/
 
         //escrevendo ...
-        /*let obj
-        data.chapters.forEach(data => {
-            realm.write(() => {
-            obj = realm.create("Test", {
-                id: data.id,
-                number: data.number + '',
-                title: data.title,
-            });
-            console.log(`created: ${obj.title}`);
-            });
-        }) */
+        const tasksForRead = await realm.objects("Test");
+        if(tasksForRead.length == 0){
+            let obj
+            data.chapters.forEach(data => {
+                realm.write(() => {
+                obj = realm.create("Test", {
+                    id: data.id,
+                    number: data.number + '',
+                    title: data.title,
+                });
+                console.log(`created: ${obj.title}`);
+                });
+            })
+        }
 
         //lendo ...
         const tasks = await realm.objects("Test");
@@ -70,6 +73,21 @@ export default function ScreenRealm() {
             Datas.push(el)
         })
         setDatas(Datas)
+
+
+        // lendo com graphQL ...
+        /*const query = {
+            tasks(query:  { title: "Preface" }) {
+              title
+              id
+            }
+          }*/
+
+        console.log('GRAPH ' + response)
+
+        /*tasks.filtered({
+            query: query
+        })*/
 
         // update
         Datas.forEach(e => {
@@ -88,7 +106,7 @@ export default function ScreenRealm() {
     }
 
     return(
-        <View>
+        <View style={{backgroundColor: '#5f5', flex: 1}}>
             <Text>
                 Tetsando Screen Realm
             </Text>

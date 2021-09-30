@@ -38,10 +38,18 @@ export default Screen = ({navigation}) => {
             />
             : <Text>Loading</Text>
             }
-            <Button
-              onPress={() => {navigation.navigate('Realm')}}  
-              title="Realm"  
-            />
+            <View style={{ marginVertical: 10, marginHorizontal: 5, marginTop: 50}}>
+              <Button
+                onPress={() => {navigation.navigate('Realm')}}  
+                title="Realm"  
+              />
+            </View>
+            <View style={{ marginVertical: 10, marginHorizontal: 5}}>
+              <Button
+                onPress={() => {navigation.navigate('Offline')}}  
+                title="Offline"  
+              />
+            </View>
         </View>
     )
 }

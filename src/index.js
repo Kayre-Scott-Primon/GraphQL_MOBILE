@@ -4,6 +4,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ScreenRealm from "./ScreenRealm";
+import ScreenOffline from './offline'
 
 const cache = new InMemoryCache()
 
@@ -21,6 +22,7 @@ const App = () => (
             <Stack.Navigator>
                 <Stack.Screen name="Home" component={Screen} />
                 <Stack.Screen name="Realm" component={ScreenRealm} />
+                <Stack.Screen name="Offline" component={ScreenOffline} />
             </Stack.Navigator>
         </NavigationContainer>
     </ApolloProvider>
