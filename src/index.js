@@ -3,7 +3,7 @@ import Screen from "./Screen";
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import ScreenRealm from "./ScreenRealm";
+import ScreenRealm from "./Realm";
 import ScreenOffline from './offline'
 import ScreenRedux from "./redux";
 import ScreenGraphQL from "./grapgQL";

@@ -43,6 +43,12 @@ export default Screen = ({navigation}) => {
                   title="Redux"  
                 />
               </View>
+              <View style={{ marginVertical: 10, marginHorizontal: 5}}>
+                <Button
+                  onPress={() => {navigation.navigate('GitHub')}}  
+                  title="GitHub"  
+                />
+              </View>
             </View>
         </View>
     )
